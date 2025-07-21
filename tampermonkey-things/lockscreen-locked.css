@@ -1,0 +1,62 @@
+:root {
+  --grey-dark:   #2f363d;  /* almost black, strong */
+  --grey-medium: #566270;  /* classic cool grey */
+  --grey-light:  #aab2bd;  /* soft, easy on eyes */
+  --grey-bg:     #f5f7fa;  /* light grey background */
+  --grey-accent: #778ca3;  /* subtle accent */
+}
+
+/* Lock Overlay */
+#lock-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--grey-dark);
+  color: var(--grey-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+  user-select: none;
+  padding: 0 20px;
+  text-align: center;
+}
+
+body > *:not(#lock-overlay) {
+  display: none !important;
+}
+
+/* Message text */
+#lock-overlay > .message {
+  font-size: 24px;
+  margin-bottom: 16px;
+  white-space: pre-line; /* keep line breaks */
+}
+
+/* Password input */
+#lock-overlay input {
+  background-color: var(--grey-medium);
+  border: none;
+  border-radius: 6px;
+  color: var(--grey-bg);
+  font-size: 18px;
+  padding: 12px 20px;
+  width: 320px;
+  max-width: 90vw;
+  outline: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* Placeholder style */
+#lock-overlay input::placeholder {
+  color: var(--grey-accent);
+}
+
+/* Input focus effect */
+#lock-overlay input:focus {
+  background-color: #6a7a91;
+}
