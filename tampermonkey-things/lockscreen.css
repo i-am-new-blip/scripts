@@ -16,6 +16,7 @@
   color: var(--grey-light);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   flex-direction: column;
+  font-size: 24px
   justify-content: center;
   align-items: center;
   z-index: 9999999;
@@ -28,7 +29,7 @@
 #lock-overlay div {
   font-size: 24px;
   margin-bottom: 16px;
-  white-space: pre-line; /* keep line breaks */
+  white-space: pre-line; /* keep line breaks */z
 }
 
 /* Password input */
@@ -44,6 +45,7 @@
   outline: none;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
+  text-align: center
 }
 
 /* Placeholder style */
